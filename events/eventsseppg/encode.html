@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bosco </title>
+  <link rel="icon" href="/logo.png" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("bg1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      overflow: scroll;
+      overflow-x: hidden;
+    }
+    .container {
+      opacity: 0.8;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .container h2, .container p {
+      text-align: justify;
+    }
+    .container img {
+      opacity: 0.8;
+      max-width: 35%;
+      height: auto;
+    }
+    .arrow-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 10%;
+    }
+    .arrow-btn {
+      width: 70px;
+      height: 70px;
+      font-size: 35px;
+    }
+    .footer-buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .footer-buttons .btn {
+      width: 30%;
+    }
+    .footer-buttons .btn-center {
+      width: 30%;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .footer-buttons .btn {
+        font-size: 14px;
+      }
+      .arrow-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+      }
+    }
+    @media (max-width: 576px) {
+      .footer-buttons .btn {
+        font-size: 12px;
+      }
+    }
+    @media (max-width: 768px) {
+      .footer-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .btn {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .btn-icon {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+    @media (max-width: 600px) {
+      .container1 {
+        width: 250px;
+        height: 250px;
+      }
+    }
+    @font-face {
+       font-family: 'bankgothic';
+       src: url("/Bank\ Gothic.woff") format('woff');
+      }
+  </style>
+</head>
+
+<body  
+onkeydown="if(event.keyCode === 123) { 
+  return false; 
+}
+  else if (event.ctrlKey && event.shiftKey && event.keyCode === 73||67) {
+  return false;
+  }
+  else if (event.metaKey && event.altKey && event.keyCode === 73||85||67||74||75) {
+  return false; 
+  }
+  else if (event.ctrlKey && event.keyCode === 85) {
+  return false;
+  }
+  ">
+  <center><img src="PNGs/encode-min_8_11zon.png" class="container1" alt="Solstice" width="35%" style="padding: 2%;"></center>
+  <div class="arrow-container">
+    <a href="premiere.html" class="btn btn-dark arrow-btn" style="width:20%"><</a>
+    <a href="sangeetsaga.html" class="btn btn-dark arrow-btn" style="width:20%">></a>
+  </div>
+
+  <div class="container bg-dark text-white text-center" style="font-family: sans-serif;">
+    <h1 style="font-family: bankgothic;">Bosco Encode - Coding </h1>
+    <blockquote>
+      <p style="padding-left: 3%; padding-right: 3%;"> "Step into our coding extravaganza where bytes meet brilliance! Channel your inner Tony Stark as we hack through the space-time continuum, as we delve into the world where Elon Musk's algorithms and Sheldon Cooper's meticulousness converge. Inspired by the efficiency of and the precision of Tim Berners-Lee's code, we're exploring the realm where lines of code shape the future. With the precision of 'The Matrix' and the ingenuity of 'The Social Network,' let's craft solutions that transcend time itself. </p>
+    </blockquote>
+  </div>
+  <br>
+
+  <div class="container bg-dark text-white" style="font-family: sans-serif;">
+    <h2 style="text-align: center; font-family: bankgothic;">Rules</h2>
+    <blockquote style="padding-left: 3%; padding-right: 3%;">
+    
+      <p>Participants: 2</p>
+      <p>ROUND 1: (30+5) minutes</p>
+      <ul>
+          <li>The participants will be given a coding challenge, which is to be solved in 30 minutes. Before that, 5 minutes of brainstorming is allowed after the questions are given. After brainstorming, the participants will be given access to the machines.</li>
+          <li>Both the participants have to participate in this round simultaneously.</li>
+          <li>Contestants have to write the programs in the following language:
+              <ol>
+                  <li>Python/Java</li>
+                  <li>C++</li>
+              </ol>
+          </li>
+          <li>A program will be considered wrong if it fails to work on one or more of the test cases. It will otherwise be considered correct for the purposes of this contest. A correct program will be awarded the full points. In the event of a tie, programs will be awarded partial credits based on the number of tests correctly passed or the time recorded in ascending order.</li>
+          <li>Sample inputs will be provided to the participants.</li>
+          <li>The coding and the screenshots of the output to be saved in a folder.</li>
+          <li>Participants will not be allowed to access the internet for any purpose.</li>
+          <li>The method of submission of the code will be provided to the participants on the day of the event.</li>
+      </ul>
+      <p>ROUND 2: 10 minutes</p>
+      <ul>
+          <li>Participants will be given a Google form link where they have to solve a quiz related to the historical and technological timeline of Computer Science.</li>
+          <li>Both participants have to brainstorm together.</li>
+          <li>Points will be awarded based on the number of correct replies or ties will be broken by the total time for each school in ascending order of time.</li>
+          <li>Use of the internet will be strictly prohibited in this round.</li>
+      </ul>
+      <p>ROUND 3: 20 minutes</p>
+      <ul>
+          <li>Participants will be getting a topic about a futuristic proposed AI/ML Model which will be chosen randomly from a set of problem statements.</li>
+          <li>Access to the internet will be provided to frame the ideas. No coding is to be done in this round.</li>
+          <li>Participants will be given 4 minutes to present the same in front of the judges.</li>
+          <li>Original, realistic and implementable ideas will be encouraged and gradation will be done based on the judge’s discretion. The participants may refer to any standard AI models as a point of reference.</li>
+      </ul>
+      
+
+
+
+
+      
+    </blockquote>
+  </div>
+  
+  
+  <div class="footer-buttons d-flex justify-content-center mt-4" style="display: flex;">
+    <a href="/events/eventcf.html" class="btn btn-dark rounded-pill mx-2" style="width: 200px; font-size: 1.5rem; font-family: bankgothic;">Events</a>
+    <a href="/index.html" class="btn btn-dark rounded-pill mx-2" style="width: 200px; font-size: 1.5rem; font-family: bankgothic;">Home</a>
+</div>
+
+
+  
+
+
+  
+</body>
+</html>

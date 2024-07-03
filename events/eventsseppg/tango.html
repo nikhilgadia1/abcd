@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bosco Tango</title>
+  <link rel="icon" href="/logo.png" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("bg1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      overflow: scroll;
+      overflow-x: hidden;
+    }
+    .container {
+      opacity: 0.8;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .container h2, .container p {
+      text-align: justify;
+    }
+    .container img {
+      opacity: 0.8;
+      max-width: 35%;
+      height: auto;
+    }
+    .arrow-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 10%;
+    }
+    .arrow-btn {
+      width: 70px;
+      height: 70px;
+      font-size: 35px;
+    }
+    .footer-buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .footer-buttons .btn {
+      width: 30%;
+    }
+    .footer-buttons .btn-center {
+      width: 30%;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .footer-buttons .btn {
+        font-size: 14px;
+      }
+      .arrow-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+      }
+    }
+    @media (max-width: 576px) {
+      .footer-buttons .btn {
+        font-size: 12px;
+      }
+    }
+    @media (max-width: 768px) {
+      .footer-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .btn {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .btn-icon {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+    @media (max-width: 600px) {
+      .container1 {
+        width: 250px;
+        height: 250px;
+      }
+    }
+    @font-face {
+       font-family: 'bankgothic';
+       src: url("/Bank\ Gothic.woff") format('woff');
+      }
+  </style>
+</head>
+
+<body 
+onkeydown="if(event.keyCode === 123) { 
+  return false; 
+}
+  else if (event.ctrlKey && event.shiftKey && event.keyCode === 73||67) {
+  return false;
+  }
+  else if (event.metaKey && event.altKey && event.keyCode === 73||85||67||74||75) {
+  return false; 
+  }
+  else if (event.ctrlKey && event.keyCode === 85) {
+  return false;
+  }
+  ">
+  <center><img src="PNGs/tango-min_22_11zon.png" class="container1" alt="Solstice" width="35%" style="padding: 2%;"></center>
+  <div class="arrow-container">
+    <a href="jukebox.html" class="btn btn-dark arrow-btn" style="width:20%"><</a>
+    <a href="controvert.html" class="btn btn-dark arrow-btn" style="width:20%">></a>
+  </div>
+  <div class="container bg-dark text-white text-center" style="font-family: sans-serif;">
+    <h1 style="font-family: bankgothic;">Bosco Tango - Western Dance </h1>
+    <blockquote>
+      <p style="padding-left: 3%; padding-right: 3%;">Pirouette through the fabric of history with manifold eyeballs glued to your figure as your performance is either discarded as another passing trend or becomes as iconic as the moonwalk. Feel the pulsating energy of the stage as your senses are engulfed by the symphony of motion and music, lose yourself in the moment and seize the opportunity to display your dancing prowess. Shock both the haughty masqueraders and the club-going millennials with your gravity-defying break dance and deign to earn the epithet of ‘King of Pop’. 
+      </p>
+    </blockquote>
+  </div>
+  <br>
+
+  <div class="container bg-dark text-white" style="font-family: sans-serif;">
+    <h2 style="text-align: center; font-family: bankgothic;">Rules</h2>
+    <blockquote style="padding-left: 3%; padding-right: 3%;">
+    
+      <p>Participants: 7+5</p>
+      <p>Duration: 5+2 minutes</p>
+      <ul>
+          <li>There should be a minimum of 5 participants on stage at all times.</li>
+          <li>Points will be deducted for exceeding the prescribed time limit.</li>
+          <li>Any form of vulgarity, inappropriateness, suggestive movements or lyrics will lead to the disqualification of the participating school.</li>
+          <li>The dance track must be e-mailed to the fest e-Mail ID (home.boscofest@gmail.com) by 29th June, 2024.</li>
+          <li>The songs must be submitted in a pen drive, at the registration desk on the day of the Fest.</li>
+          <li>Each participating school must bring their own props for the performance.</li>
+          <li>The decision of the judges will be final and binding.</li>
+          <li>Any inappropriate dress will lead to the cancellation of the performance.</li>
+      </ul>
+    
+
+
+
+
+
+
+      
+    </blockquote>
+  </div>
+  
+  
+  <div class="footer-buttons d-flex justify-content-center mt-4" style="display: flex;">
+    <a href="/events/eventcf.html" class="btn btn-dark rounded-pill mx-2" style="width: 200px; font-size: 1.5rem; font-family: bankgothic;">Events</a>
+    <a href="/index.html" class="btn btn-dark rounded-pill mx-2" style="width: 200px; font-size: 1.5rem; font-family: bankgothic;">Home</a>
+</div>
+
+  
+
+
+  
+</body>
+</html>
