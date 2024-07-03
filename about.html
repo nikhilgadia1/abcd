@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosco Fest 2024</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@2.11.8/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>About Us</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background: url("aboutbg.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: justify;
+            
+        }
+        #navbar {
+      overflow: hidden;
+      opacity: 95%;
+      transition: 0.3s;
+      position: fixed;
+      z-index: 3;
+      transition: 0.3s;
+      height: fit-content;
+      top: 0px;
+      
+    }
+
+    #navbar a {
+      float: left;
+      color: #888888;
+      opacity: 95%;
+      transition: 0.1s;
+      font-weight: bold;
+      font-size: 25px;
+      font-family: 'bankgothic';
+    }
+
+    #navbar a:hover {
+      color: white;
+      opacity: 90%;
+      cursor: pointer;
+      font-weight: bolder;
+    }
+
+    a.nav_link {
+      font-family: nunito;
+      font-size: 20px
+    }
+        
+        img.logo {
+            padding: 1px 1px;
+            width: 50px
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 9000px;
+            margin-top: 100px;
+        }
+        h1, h2 {
+            font-size: 3em;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 0 0 20px;
+        }
+
+        
+  .footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: var(--light);
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+  }
+  
+  .footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  
+  .footer .btn.btn-link:hover {
+    color: var(--primary);
+    letter-spacing: 1px;
+    box-shadow: none;
+  }
+  
+  .copyright {
+    color: var(--light);
+    background: #000B1C;
+  }
+  
+  .copyright a {
+    color: var(--light);
+  }
+  
+  .copyright a:hover {
+    color: var(--primary);
+  }
+  @font-face {
+  font-family: 'Evil Empire';
+  src: url('Evil Empire.woff') format('woff');
+  /* Add more src lines if you have different formats */
+}
+
+#counter_container {
+    min-height: 245px;
+    padding-top: 25px;
+  }
+  .counter {
+  padding: 20px 0;
+  border-radius: 5px;
+  }
+  
+  .count-title {
+  font-size: 50px;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+  }
+  
+  .count-text {
+  font-size: 180%;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+  }
+  
+  .fa-2x {
+  margin: 0 auto;
+  float: none;
+  display: table;
+  color: #4ad1e5;
+  min-height: 10px;
+  min-width: 10px;
+  }
+  
+  #main_counter {
+    margin-top: 50px;
+  }
+
+  @media (max-width: 930px) {
+    .col-lg-3 {
+      margin-bottom: 100px;
+    }
+  }
+
+  .elementor-icon-list-text:hover {
+    color: rgb(18, 165, 190);
+  }
+  .elementor-icon-list-icon:hover {
+    color: rgb(18, 165, 190);
+  }
+
+  @font-face {
+         font-family: 'Lexend Zetta';
+         src: url("LexendZetta-Regular.woff") format('woff');
+      }
+  @font-face {
+       font-family: 'bankgothic';
+       src: url("Bank\ Gothic.woff") format('woff');
+      }
+    </style>
+    <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+   <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyD-x-8DnD5gK6SdrcHsETjSH9MTj_nQ_wg",
+        authDomain: "boscofeast.firebaseapp.com",
+        projectId: "boscofeast",
+        storageBucket: "boscofeast.appspot.com",
+        messagingSenderId: "140906558190",
+        appId: "1:140906558190:web:5ce4256e5ec7229625b9ff",
+        measurementId: "G-Y589VJ9K6S"
+      }
+  
+      
+      firebase.initializeApp(firebaseConfig);
+  
+    function fetchData() {
+        const database = firebase.database();
+        const ref = database.ref('Counter');
+  
+        ref.get().then((snapshot) => {
+          if (snapshot.exists()) {
+            const data = snapshot.val();
+            displayData(data);
+          } else {
+            console.log("No data available");
+          }
+        }).catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+      }
+  
+      function displayData(data) {
+        const tableBody = document.getElementById('counter');
+        tableBody.innerHTML = '';
+        console.log(data);
+        tableBody.innerHTML = data;
+      }
+  // Fetch data on page load and increment the counter
+  window.onload = function () {
+      fetchData();
+    };
+
+    $(document).keydown(function(e){ 
+    if(e.which === 123){ 
+       return false;
+    } 
+ 
+}); 
+
+
+
+  </script> 
+</head>
+<body 
+onkeydown="if(event.keyCode === 123) { 
+  return false; 
+}
+  else if (event.ctrlKey && event.shiftKey && event.keyCode === 73||67) {
+  return false;
+  }
+  else if (event.metaKey && event.altKey && event.keyCode === 73||85||67||74||75) {
+  return false; 
+  }
+  else if (event.ctrlKey && event.keyCode === 85) {
+  return false;
+  }
+  ">
+  <nav id="navbar" class="navbar navbar-expand-lg bg-dark navbar-dark w-100 text-center">
+    <div class="me-auto">
+      <a class="p-2 navbar-brand" href="/index.html">
+      <a class="p-3 nav-item nav-link"  style="margin-left: -20%;" >
+         <img src="Boscofest1.png" style="width: 80%; height: 35%;margin-top: -4%;">
+      </a>
+   </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse mx-auto navbar-nav" id="collapsibleNavbar">
+      <a id="menu" class="p-2 nav-item nav-link" href="/index.html">Home</a>   
+      <a id="menu" class="p-2 nav-item nav-link" href="/events/eventcf.html">Events</a>    
+      <a id="contact" class="p-2 nav-item nav-link" href="/schedule.html">Schedule</a>
+      <a id="contact" class="p-2 nav-item nav-link" href="/schools/schools.html">Schools</a>
+    </div>
+  </nav>       
+      
+<div class="container" style="margin-top:150px;">
+    <div class="container col-sm-12 p-4" style="background-color:  black; font: size 30px; font-family: sans-serif  ; opacity:0.8; border-radius: 10px; margin-bottom: 50px;">
+    <h1 style="font-size: 242%; font-family: bankgothic;">"1 Day - 24 Hours - 24 Events  - 24 Missions  - ∞ Talents"</h1>
+    <center>
+        <!-- <hr style="width: 150px; height: 5px; background-color: white; opacity: 0.9;"> -->
+    </center>
+    </div>
+    
+    <div class="container row" style="margin-left: 0px;">
+        <div class="container col-lg-3 p-2" style="background-color: black; opacity:0.8; border-radius: 10px;">
+            <h2 class="text-center" style="font-size: 30px; font-family: bankgothic;">Past</h2>
+            <p style="padding-left: 4%;padding-right: 4%;">The timeline is a timeless concept, an infinitely stretching, infinitely repeating stream filled with a myriad of parallel realities flowing simultaneously along the time-stream. For eons, He Who Remains, the guardian of the Sacred Timeline, has warded off threats like Variants and Nexus Beings whose very existence threatens the collapse of the universe. With the assassination of He Who Remains, the timeline has fallen into disrepair and its uncontrollable branching risks the end of all life as we know it. The burden of its protection now rests on your shoulders.
+            </p>
+        </div>
+        <div class="container col-lg-3 p-2" style="background-color: black; opacity:0.8; border-radius: 10px;">
+            <h2 class="text-center" style="font-size: 30px; font-family:bankgothic">Present</h2>
+            <p style="padding-left: 4%;padding-right: 4%;">Your mission, if you choose to accept it, is to prevent the timeline from self-destructing and eliminating all of creation. We have identified a set of 24 inter-dimensional critical nexus points, all of whom pose threats to the sanctity of the timeline. Assemble your team of elite multidimensional warriors to tackle these nexus points one-by-one and prevent the space-time continuum for imploding on itself. Be warned, trespassing through the timeline presents unimaginable dangers and infinitesimally small probabilities of success but that’s just a quick 20 minute adventure for you, right?
+            </p>
+        </div>
+        <div class="container col-lg-3 p-2" style="background-color: black; opacity:0.8; border-radius: 10px;">
+            <h2 class="text-center" style="font-size: 30px;font-family:bankgothic;">Future</h2>
+            <p style="padding-left: 4%;padding-right: 4%;">Assuming all of you manage to return in one piece, of the same age and from the same universe, you shall be deemed Guardians of the Timeline and go down in history beside the likes of Loki and Doctor Strange as people who dared to risk it all for the sake of the timeline. Remember, your sole priority is to restore the timeline to its normal state and prevent it from collapsing and taking the multiverse with it. We invite you to test your abilities in this almost impossible mission that transcends the confines of space and time and see if the odds are in your favor or not.<br> Godspeed, brave tributes.</p>
+        </div>
+    </div>
+</div>
+
+<center>
+  <div id="main_counter" class="container" style="border-radius: 10px;">
+    <div id="counter_container" class="row text-center w-100" style="border-radius: 7px; background-color: black; opacity:0.9;">
+        <div class="col-lg-3 col-xs-3 col-sm-3">
+          <div class="counter">
+            <i class="bi bi-globe-americas fa-2x" style="font-size: 180%;"></i>
+            <h2 class="timer count-title count-number" data-to="1" data-speed="1"style="font-size: 200%;">1</h2>
+            <p class="count-text" style="font-family: bankgothic;">Day</p>
+            <!-- <hr class="bg-white mx-auto mb-0" style="opacity: 0.8; width: 15%;"> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-3 col-sm-3">
+          <div class="counter">
+            <i class="bi bi-clock fa-2x"style="font-size: 180%;"></i>
+            <h2 class="timer count-title count-number" data-to="24" data-speed="6"style="font-size: 200%;">24</h2>
+            <p class="count-text " style="font-family:bankgothic;">Hours</p>
+            <!-- <hr class="bg-white mx-auto mb-0" style="opacity: 0.8; width: 15%;"> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-3 col-sm-3">
+          <div class="counter">
+            <i class="bi bi-calendar-event-fill fa-2x"style="font-size: 180%;"></i>
+            <h2 class="timer count-title count-number" data-to="24" data-speed="6" style="font-size: 200%;">24</h2>
+            <p class="count-text " style="font-family: bankgothic;">Events</p>
+            <!-- <hr class="bg-white mx-auto mb-0" style="opacity: 0.9; width: 15%;"> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-3 col-sm-3">
+            <div class="counter">
+              <i class="bi bi-star-fill fa-2x"style="font-size: 180%;"></i>
+              <h2 class="timer count-title count-number" data-to="1" data-speed="1" style="font-size: 200%;">∞</h2>
+              <p class="count-text " style="font-family: bankgothic">Talents</p>
+              <!-- <hr class="bg-white mx-auto mb-0" style="opacity: 0.9; width: 15%;"> -->
+            </div>
+          </div>
+    </div>
+</div>
+</center>
+
+<center>
+<div style=" margin-top:5%;background-color: black; border-radius: 10px; " class="container p-2 ">
+  <!--h4 style=" font-family: 'Evil Empire'; color:rgb(247, 210, 46); text-shadow: 5px 5px 20px hsl(180, 99%, 28%);">Visitor Counter:  </h4>
+  h4 id="counter" style="color: white;text-shadow: 10px 10px 20px rgb(247, 210, 46);"> Loading...</h4>
+  <h4>
+    <span id="counter" class="badge badge-warning">Loading...</span>
+  </h4-->
+  <h3 style=" color:white; font-family: bankgothic; font-size: 140%;">Temporal Footprints:<span class="badge badge-warning" id="counter" style="font: size 200%;; font-family:bankgothic;"><i class="fa fa-users"></i></span>
+  </h3>
+</div></center>
+
+<div id="main_counter" class="container" style="border-radius: 10px;"><center>
+<div class="container row" style="margin-left: 0px;">
+  <div class="container " style="background-color: black; opacity:0.8; border-radius: 10px;">
+    <div>
+      <h2 class="text-center" style="font-size: 300%;font-family: bankgothic;">Our Team</h2>
+      <p ><h3 style="font-size: 200%; font-family: bankgothic;">CORE COMMITTEE</h3>
+        <h3 style="font-size: 150%; font-family: bankgothic;">TEACHERS</h3>
+        <p style="font-family: lexend zetta; font-size: 105%;">
+          Mr. Mathew Sam<br>  
+          Mr. Anupam Banerjee <br>
+          Mrs. Sukhvinder Madhok <br>
+          Mrs. Monideepa Roy <br>
+          Mrs. Abhishweta Roy Chowdhury <br>
+          Mr. Roy Joseph P <br>
+          Mr. Debarshi Chakraborty <br>
+        </p>
+        <h3 style="font-size: 150%; font-family: bankgothic;">STUDENTS</h3>
+        <p style="font-family: lexend zetta; font-size: 105%;">
+        Devansh Agarwal<br>
+        Amay Rathore<br>
+        Aditya Banerjee<br>
+        Yuvraj Berlia<br>
+        Archisman Ray<br><br>
+      </p>
+        </div>
+        <div>
+        <h3 style="font-size: 200%;  font-family: bankgothic;"> GRAPHICS</h3>
+        <p style="font-family: lexend zetta; font-size: 105%;">
+        Ritesh Agarwal<br>
+        Sourodeep Sarkar<br>
+        Archit Tibrewala<br>
+        Abhiraj Chatterjee<br>
+        Harshvardhan Saraf<br>
+      </p>
+        <br></div>
+        <div>
+        <h3 style="font-size:200%;  font-family: bankgothic;">VIDEO</h3>
+        <p style="font-family: lexend zetta; font-size: 105%;">
+        Pavvit Singh Batra<br>
+        Aryaveer Agarwal <br>
+      </p>
+        <br></div>
+        <div>
+        <h3 style="font-size:200%;  font-family: bankgothic;">WEBSITE</h3>
+        <p style="font-family: lexend zetta; font-size: 105%;">
+        Hemang Domadia<br>
+        Sumedh Gadia<br>
+        Soham Chowdhury<br>
+      </p>
+        <br></div>
+        <div>
+        <h3 style="font-size: 200%; font-family: bankgothic;">SPECIAL MENTION</h3>
+        <p style="font-family: lexend zetta; font-size: 105%;">
+        Ritwik Kapur<br>
+        Vansh Bothra<br>
+        Vrishank Garg<br>
+        Inesh Jain<br>
+      </p>
+        </div>
+      </p>
+  </div>
+</div>
+</div>
+</center>
+
+
+   
+    <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s" >
+      <div class="container py-5">
+        <div class="row g-5 justify-content-center" >
+  
+          <div class="col-lg-3 col-md-6 mx-auto"style="margin-bottom: -5%;">
+            <h4 class="text-white mb-4">Contact us:</h4>
+            <div class="mt-4">
+              <p class="text-white">
+                <i class="fas fa-phone-alt"></i> Phone: +91 33 2287-9202
+              </p>
+              <p class="text-white">
+                <i class="fas fa-envelope"></i><a href="mailto:home.boscofest@gmail.com" style="text-decoration: none;">home.boscofest@gmail.com</a>
+              </p>
+              <p class="text-white">
+                <i class="fas fa-map-marker-alt"></i> Address: 23, Darga Rd, Park Circus, Beniapukur, Kolkata, West Bengal 700017
+              </p>
+            </div>
+          </div>
+    
+          <div class="col-lg-2 col-md-6 mx-auto">
+            <h4 class="text-white mb-4">Connect On:</h4>
+            <style>
+              .elementor-icon-list-icon {
+                font-size: 24px;
+                margin-right: 10px;
+              }
+    
+              .elementor-icon-list-icon {
+                color: white;
+                font-size: 24px;
+                margin-right: 10px;
+              }
+    
+              .elementor-icon-list-text {
+                color: white;
+              }
+    
+              .elementor-icon-list-item a {
+                text-decoration: none;
+              }
+    
+              .elementor-icon-list-icon {
+                color: white;
+                font-size: 24px;
+                margin-right: 10px;
+              }
+    
+              .elementor-icon-list-text {
+                color: white;
+              }
+            </style>
+    
+            <div class="elementor-icon-list-items elementor-inline-items" >
+              <div class="elementor-icon-list-item elementor-inline-item"style="padding-bottom: 6%;">
+                <a href="https://www.instagram.com/boscofest24" target="_blank">
+                  <span class="elementor-icon-list-icon bi bi-instagram"></span>
+                  <span class="elementor-icon-list-text">Instagram</span>
+                </a>
+              </div>
+              <div class="elementor-icon-list-item elementor-inline-item"style="padding-bottom: 6%;">
+                <a href="https://www.facebook.com/profile.php?id=61561128274232&mibextid=ZbWKwL" target="_blank">
+                  <span class="elementor-icon-list-icon bi bi-facebook"></span>
+                  <span class="elementor-icon-list-text">Facebook</span>
+                </a>
+              </div>
+              <div class="elementor-icon-list-item elementor-inline-item">
+                <a href="https://www.youtube.com/@donboscoschoolparkcircus1452/featured" target="_blank">
+                  <span class="elementor-icon-list-icon bi bi-youtube"></span>
+                  <span class="elementor-icon-list-text">Youtube</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mx-auto" style="margin-top: 10px;">
+            <br>
+            <h4 class="text-white mb-4" style="padding-top: 4%;"> Locate us:</h4>
+            <div class="mapouter">
+              <div class="gmap_canvas">
+                <iframe width="240" height="215" id="gmap_canvas" src="https://maps.google.com/maps?q=Don+Bosco+School+Park+Circus&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <a href="https://online.stopwatch-timer.net/">timer for kids</a><br>
+                <a href="https://textcaseconvert.com/"></a><br>
+              </div>
+            </div>
+          </div>
+          <style>
+            .mapouter {
+              position: relative;
+              text-align: right;
+              height: 215px;
+              width: 240px;
+              border-radius: 10px;
+              overflow: hidden;
+            }
+    
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 215px;
+              width: 240px;
+              border-radius: 10px;
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var navbarCollapse = document.getElementById('collapsibleNavbar');
+          var navbarToggler = document.querySelector('.navbar-toggler');
+          
+          function collapseNavbar() {
+              var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                  toggle: false
+              });
+              bsCollapse.hide();
+          }
+          
+          // Collapse the navbar when a nav link is clicked
+          var navLinks = document.querySelectorAll('#collapsibleNavbar .nav-link');
+          navLinks.forEach(function(navLink) {
+              navLink.addEventListener('click', collapseNavbar);
+          });
+      
+          // Collapse the navbar when anything outside of the navbar is clicked
+          document.addEventListener('click', function(event) {
+              var isClickInside = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+              if (!isClickInside) {
+                  collapseNavbar();
+              }
+          });
+      });
+      </script>
+  
+  </body>
+  
+  </html>

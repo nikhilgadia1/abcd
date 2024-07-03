@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bosco Reverie</title>
+  <link rel="icon" href="/logo.png" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("bg1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      overflow: scroll;
+      overflow-x: hidden;
+    }
+    .container {
+      opacity: 0.8;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .container h2, .container p {
+      text-align: justify;
+    }
+    .container img {
+      opacity: 0.8;
+      max-width: 35%;
+      height: auto;
+    }
+    .arrow-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 10%;
+    }
+    .arrow-btn {
+      width: 70px;
+      height: 70px;
+      font-size: 35px;
+    }
+    .footer-buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .footer-buttons .btn {
+      width: 30%;
+    }
+    .footer-buttons .btn-center {
+      width: 30%;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .footer-buttons .btn {
+        font-size: 14px;
+      }
+      .arrow-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+      }
+    }
+    @media (max-width: 576px) {
+      .footer-buttons .btn {
+        font-size: 12px;
+      }
+    }
+    @media (max-width: 768px) {
+      .footer-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .btn {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .btn-icon {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+    @media (max-width: 600px) {
+      .container1 {
+        width: 250px;
+        height: 250px;
+      }
+    }
+    @font-face {
+       font-family: 'bankgothic';
+       src: url("/Bank\ Gothic.woff") format('woff');
+      }
+  </style>
+</head>
+
+<body 
+onkeydown="if(event.keyCode === 123) { 
+  return false; 
+}
+  else if (event.ctrlKey && event.shiftKey && event.keyCode === 73||67) {
+  return false;
+  }
+  else if (event.metaKey && event.altKey && event.keyCode === 73||85||67||74||75) {
+  return false; 
+  }
+  else if (event.ctrlKey && event.keyCode === 85) {
+  return false;
+  }
+  ">
+  <center><img src="PNGs/reverie 6-min_18_11zon.png " class="container1" alt="Solstice" width="35%" style="padding: 2%;"></center>
+  <div class="arrow-container">
+    <a href="conundrum.html" class="btn btn-dark arrow-btn" style="width:20%"><</a>
+    <a href="premiere.html" class="btn btn-dark arrow-btn" style="width:20%">></a>
+  </div>
+
+ 
+  <div class="container bg-dark text-white text-center" style="font-family: sans-serif;">
+    <h1 style="font-family: bankgothic;">Bosco Reverie - Creative Writing</h1>
+    <blockquote>
+      <p style="padding-left: 3%; padding-right: 3%;"> Get your ‘time machine’ and step into a new timeline where the past, present and future converge in a symphony of prose crafting. Let us embark on a creative writing extravaganza and get Doraemon’s ‘Anywhere Door’ to hop on a writing adventure, where every page turn will take you to endless possibilities. Prepare your wits and pick up your pens for a day of uproarious wordplay and refined creativity in this war of words.
+      </p>
+    </blockquote>
+  </div>
+  <br>
+
+  <div class="container bg-dark text-white" style="font-family: sans-serif;">
+    <h2 style="text-align: center; font-family: bankgothic;">Rules</h2>
+    <blockquote style="padding-left: 3%; padding-right: 3%;">
+    
+      <p>Participants: 3 (Individual)</p>
+      <p>Duration: 60 minutes</p>
+      <ul>
+          <li>The participants will be provided with topics on the day of the Fest. Participants are granted the liberty to choose their own subject matter.</li>
+          <li>There will be topics pertaining to 3 different languages- English, Hindi and Bengali. The schools must have 3 participants, each ready to compose a topic in one of the 3 different languages.</li>
+          <li>Participants are expected to write their compositions within 500 - 1000 words for English and Bengali and in 1000 words for Hindi.</li>
+          <li>Participants will be provided with a pen and paper. No other equipment, especially electronics, will be allowed.</li>
+          <li>The usage of dialogues and catch-phrases in the story, akin to the topic is encouraged.</li>
+          <li>The judges will evaluate the submissions on the quality of the written material, structure of the story, description, imagery and any other criteria they deem necessary.</li>
+          <li>Usage of vulgarity, profanity or inappropriate language will not be allowed and will lead to the submission being void.</li>
+          <li>Utilisation of unethical methods will result in immediate disqualification of the participant.</li>
+      </ul>
+      
+
+
+
+
+
+
+      
+    </blockquote>
+  </div>
+  
+  <div class="footer-buttons d-flex justify-content-center mt-4" style="display: flex;">
+    <a href="/events/eventcf.html" class="btn btn-dark rounded-pill mx-2" style="width: 200px; font-size: 1.5rem; font-family: bankgothic;">Events</a>
+    <a href="/index.html" class="btn btn-dark rounded-pill mx-2" style="width: 200px; font-size: 1.5rem; font-family: bankgothic;">Home</a>
+</div>
+  
+
+  
+
+
+  
+</body>
+</html>
